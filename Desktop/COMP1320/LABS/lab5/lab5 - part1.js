@@ -27,6 +27,7 @@ function organize(data) {
     let lunchSec = [];
     let dinnerSec = [];
     let dessertSec = [];
+    data.sort();
     for (let value of data){
         let splitData= value.split(',');
         menu.push(splitData);
@@ -55,19 +56,19 @@ function organize(data) {
 
 function lunch(lunchSec){
     for(let lunch of lunchSec){
-        console.log(lunch.price + "  " + lunch.name + ", " + lunch.quantity + "\n");
+        console.log('$' + (parseFloat(lunch.price.replace('$','')) * 1.8).toFixed(2) + "  " + lunch.name + ", " + lunch.quantity + "\n");
     }
 }
 
 function dinner(dinnerSec){
     for(let dinner of dinnerSec){
-        console.log(dinner.price + "  " + dinner.name + ", " + dinner.quantity + "\n");
+        console.log('$' + (parseFloat(dinner.price.replace('$','')) * 1.8).toFixed(2)+ "  " + dinner.name + ", " + dinner.quantity + "\n");
     }
 }
 
 function dessert(dessertSec){
     for(let dessert of dessertSec){
-        console.log(dessert.price + "  " + dessert.name + ", " + dessert.quantity + "\n");
+        console.log('$' + (parseFloat(dessert.price.replace('$','')) * 1.8).toFixed(2) + "  " + dessert.name + ", " + dessert.quantity + "\n");
     }
 }
 
