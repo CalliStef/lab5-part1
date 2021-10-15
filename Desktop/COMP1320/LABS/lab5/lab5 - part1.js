@@ -44,7 +44,7 @@ function organize(data) {
         }
     }
 
-    // had to use writeFileSync or else the order of the writing that will be appended will be in the wrong order
+    // had to use Sync or else the order of the writing that will be appended will be in the wrong order
 
     fs.writeFileSync('./part1.txt', " * Lunch Items * \n", (err) => console.error(err));
     let lunchMenu = lunch(lunchSec);
